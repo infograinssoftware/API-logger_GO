@@ -5,8 +5,6 @@ import (
 	"net/http"
 	"os"
 	"time"
-
-	"github.com/ernesto-jimenez/httplogger"
 )
 
 func main() {
@@ -14,7 +12,7 @@ func main() {
 		Transport: httplogger.NewLoggedTransport(http.DefaultTransport, newLogger()),
 	}
 
-	client.Get("http://google.com")
+	client.Get("http://infograins.com")
 }
 
 type httpLogger struct {
